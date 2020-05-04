@@ -1,0 +1,763 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cprieels/ontologies/2020/1/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/cprieels/ontologies/2020/1/untitled-ontology-5"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SimpsonsGroup2="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/cprieels/ontologies/2020/1/untitled-ontology-5#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Simpsons family and friends entology done for the semantics course of the data science master. Group 2.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasBoss -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasBoss">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBoss"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Boss"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasBrother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasBrother">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBrother"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Brother"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasFather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasFather">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFather"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandMother">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isGrandMother"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandmother"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasParent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasMother"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandfather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandfather">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isGrandfather"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandfather"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasParent"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasFather"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasMother">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isMother"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasParent">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasSister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasSister">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isSister"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Sister"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBoss -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBoss">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Boss"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Employee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBrother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBrother">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Brother"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFather">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isParent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFriend -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFriend">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Friend"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Friend"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isGrandMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isGrandMother">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandmother"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isGrandfather -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isGrandfather">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandfather"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isMother -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isMother">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isParent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isParent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isSister -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isSister">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Sister"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Boss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Boss">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Brother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Brother">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isBrother"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Daughter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Daughter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasParent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Parent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Employee">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Family">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFather"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/gender"/>
+                <owl:hasValue>female</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Friend -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Friend">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFriend"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Granddaughter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Granddaughter">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandMother"/>
+                                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandfather"/>
+                                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Daughter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandfather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandfather">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFather"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isFather"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandmother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandmother">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isMother"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Father"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isMother"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Grandson">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandMother"/>
+                                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasGrandfather"/>
+                                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Son"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/gender"/>
+                <owl:hasValue>male</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Mother">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isMother"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Parent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Parent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isParent"/>
+                        <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Simpson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Simpson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Family"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/familyName"/>
+                <owl:hasValue>Simpson</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Sister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Sister">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Female"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#isSister"/>
+                <owl:someValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Son -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Son">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#hasParent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Parent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Male"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Ralph -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Ralph">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#abe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#abe">
+        <SimpsonsGroup2:isFather rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#apu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#apu">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#barney -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#barney">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#bart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#bart">
+        <SimpsonsGroup2:isBrother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa"/>
+        <SimpsonsGroup2:isBrother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie"/>
+        <foaf:familyName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Simpson</foaf:familyName>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bart</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#burns -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#burns">
+        <SimpsonsGroup2:isBoss rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#carl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#carl">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#clancy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#clancy">
+        <SimpsonsGroup2:isFather rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#collette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#collette"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#cyrus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#cyrus">
+        <SimpsonsGroup2:isBrother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#abe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer">
+        <SimpsonsGroup2:isFather rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#bart"/>
+        <SimpsonsGroup2:isFather rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa"/>
+        <SimpsonsGroup2:isFather rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie"/>
+        <foaf:familyName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Simpson</foaf:familyName>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Homer</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#jacqueline -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#jacqueline">
+        <SimpsonsGroup2:isMother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa">
+        <SimpsonsGroup2:isSister rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie"/>
+        <foaf:familyName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Simpson</foaf:familyName>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Lisa</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie">
+        <foaf:familyName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Simpson</foaf:familyName>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Maggie</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge">
+        <SimpsonsGroup2:isMother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#bart"/>
+        <SimpsonsGroup2:isMother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa"/>
+        <SimpsonsGroup2:isMother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie"/>
+        <foaf:familyName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Bouvier</foaf:familyName>
+        <foaf:firstName rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Marge</foaf:firstName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#milhouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#milhouse">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#bart"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#moe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#moe">
+        <SimpsonsGroup2:isBoss rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#collette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#mona -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#mona">
+        <SimpsonsGroup2:isMother rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#ned -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#ned">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#nelson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#nelson">
+        <SimpsonsGroup2:isFriend rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#patty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#patty">
+        <SimpsonsGroup2:isSister rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#selma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#selma">
+        <SimpsonsGroup2:isSister rdf:resource="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#Ralph"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#abe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#apu"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#barney"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#bart"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#burns"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#carl"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#clancy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#collette"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#cyrus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#homer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#jacqueline"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#lisa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#maggie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#marge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#milhouse"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#moe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#mona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#ned"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#nelson"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#patty"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cprieels/ontologies/2020/1/SimpsonsGroup2#selma"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
